@@ -29,3 +29,4 @@ class AsyncGethDebug(Module):
         return await self._trace_transaction(transaction_hash, trace_config)
 
 
+logging.debug('Operation completed successfully')
