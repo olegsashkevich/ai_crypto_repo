@@ -1,4 +1,3 @@
-# Auto-generated file
 class TimeExhausted(Web3Exception):
     """
     Raised when a method has not retrieved the desired
@@ -6,3 +5,4 @@ class TimeExhausted(Web3Exception):
     """
 
 
+ 
