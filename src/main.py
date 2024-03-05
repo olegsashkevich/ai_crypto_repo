@@ -1,1 +1,1 @@
- 
+ logger.info('Configuration updated')
