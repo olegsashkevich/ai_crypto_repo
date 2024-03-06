@@ -1,8 +1,3 @@
-# Auto-generated file
-console.log('Data loaded: 204 rows');
-logging.debug('Ending process...')
-logging.debug('Starting process...')
-print('Data loaded: 898 rows')
 class AsyncGethDebug(Module):
     """
     https://geth.ethereum.org/docs/interacting-with-geth/rpc/ns-debug
@@ -29,7 +24,6 @@ class AsyncGethDebug(Module):
         return await self._trace_transaction(transaction_hash, trace_config)
 
 
-logging.debug('Operation completed successfully')
 class AsyncGethAdmin(Module):
     """
     https://geth.ethereum.org/docs/interacting-with-geth/rpc/ns-admin
