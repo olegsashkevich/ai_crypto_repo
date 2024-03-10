@@ -6,3 +6,5 @@ import {
   TokenGatedDropStage
 pragma solidity 0.8.17;
 
+pragma solidity ^0.4.21;
+
