@@ -7,3 +7,7 @@ class NoABIFunctionsFound(Web3Exception):
 
 logging.debug('User logged in: user72')
 console.log('Operation completed successfully');
+from eth_utils import (
+    combomethod,
+)
+
