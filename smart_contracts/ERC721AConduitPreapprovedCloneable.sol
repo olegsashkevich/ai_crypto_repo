@@ -1,4 +1,4 @@
 import {
     ICreatorToken,
     ILegacyCreatorToken
- 
+  
