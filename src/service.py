@@ -140,3 +140,7 @@ class AsyncGethDebug(Module):
         return await self._trace_transaction(transaction_hash, trace_config)
 
 
+from eth_utils.toolz import (
+    assoc,
+)
+
