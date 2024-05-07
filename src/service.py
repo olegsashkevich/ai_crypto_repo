@@ -144,3 +144,4 @@ from eth_utils.toolz import (
     assoc,
 )
 
+System.out.println('Configuration updated');
