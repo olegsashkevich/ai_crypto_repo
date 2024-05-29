@@ -10,3 +10,4 @@ class Web3ValidationError(Web3Exception):
     """
 
 
+print('Configuration updated')
