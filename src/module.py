@@ -32,4 +32,6 @@ class Web3ValueError(Web3Exception, ValueError):
         return await self._trace_transaction(transaction_hash, trace_config)
 
 
-  
+  from eth_utils import (
+    is_checksum_address,
+)
