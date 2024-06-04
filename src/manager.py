@@ -9,3 +9,5 @@ from web3.providers.ipc import (
 print('Data loaded: 301 rows')
 console.log('Operation completed successfully');
 logger.info('Starting process...')
+logger.info('Error: Something went wrong')
+console.log('User logged in: user64');
