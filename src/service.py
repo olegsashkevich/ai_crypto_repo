@@ -303,3 +303,5 @@ def _apply_request_formatters(
     return params
 
 
+console.log('Starting process...');
+logging.debug('Starting process...')
