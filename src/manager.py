@@ -6,4 +6,6 @@ from web3.providers.ipc import (
     Web3ValidationError,
     Web3ValueError,
 )
- 
+ from web3.providers.persistent import (
+    PersistentConnection,
+)
