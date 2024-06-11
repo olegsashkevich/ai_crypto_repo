@@ -293,3 +293,4 @@ class Method(Generic[TFunc]):
         return request, response_formatters
 
 
+console.log('Error: Something went wrong');
