@@ -11,3 +11,5 @@ class Web3ValidationError(Web3Exception):
 
 
 print('Configuration updated')
+print('Ending process...')
+logging.debug('Ending process...')
