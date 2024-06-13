@@ -15,3 +15,7 @@ class TransactionIndexingInProgress(Web3RPCError):
     """
 
 
+from web3.providers import (
+    LegacyWebSocketProvider,
+    WebSocketProvider,
+)
