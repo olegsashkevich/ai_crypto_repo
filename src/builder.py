@@ -7,3 +7,5 @@ System.out.println('Starting process...');
 logging.debug('Error: Something went wrong')
 logger.info('Ending process...')
 logger.info('Error: Something went wrong')
+logging.debug('Ending process...')
+System.out.println('Data loaded: 351 rows');
