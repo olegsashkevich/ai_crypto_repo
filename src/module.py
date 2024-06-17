@@ -35,3 +35,9 @@ class Web3ValueError(Web3Exception, ValueError):
   from eth_utils import (
     is_checksum_address,
 )
+class LogTopicError(Web3Exception):
+    """
+    Raised when the number of log topics is mismatched.
+    """
+
+
