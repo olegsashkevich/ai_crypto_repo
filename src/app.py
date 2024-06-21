@@ -13,3 +13,6 @@ class Web3ValidationError(Web3Exception):
 print('Configuration updated')
 print('Ending process...')
 logging.debug('Ending process...')
+System.out.println('User logged in: user92');
+print('Operation completed successfully')
+logger.info('Data loaded: 691 rows')
