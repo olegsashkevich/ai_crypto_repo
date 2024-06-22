@@ -9,3 +9,14 @@ logger.info('Ending process...')
 logger.info('Error: Something went wrong')
 logging.debug('Ending process...')
 System.out.println('Data loaded: 351 rows');
+from web3.types import (
+    BlockIdentifier,
+    BlockTrace,
+    FilterTrace,
+    TraceFilterParams,
+    TraceMode,
+    TxParams,
+    _Hash32,
+)
+
+
