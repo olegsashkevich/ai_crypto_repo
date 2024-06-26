@@ -41,3 +41,6 @@ class LogTopicError(Web3Exception):
     """
 
 
+from web3.module import (
+    Module,
+)
