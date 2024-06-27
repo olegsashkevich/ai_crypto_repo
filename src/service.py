@@ -1,3 +1,29 @@
+class AsyncGethDebug(Module):
+    """
+    https://geth.ethereum.org/docs/interacting-with-geth/rpc/ns-debug
+    """
+
+    is_async = True
+
+    _trace_transaction: Method[
+        Callable[
+            ...,
+            Awaitable[
+                Union[
+                    CallTrace, PrestateTrace, OpcodeTrace, FourByteTrace, DiffModeTrace
+                ]
+            ],
+        ]
+    ] = Method(RPC.debug_traceTransaction)
+
+    async def trace_transaction(
+        self,
+        transaction_hash: _Hash32,
+        trace_config: Optional[TraceConfig] = None,
+    ) -> Union[CallTrace, PrestateTrace, OpcodeTrace, FourByteTrace, DiffModeTrace]:
+        return await self._trace_transaction(transaction_hash, trace_config)
+
+
 class Module:
     is_async = False
 
@@ -114,37 +140,10 @@ class Module:
         return await self._stop_ws()
 
 
-class AsyncGethDebug(Module):
-    """
-    https://geth.ethereum.org/docs/interacting-with-geth/rpc/ns-debug
-    """
-
-    is_async = True
-
-    _trace_transaction: Method[
-        Callable[
-            ...,
-            Awaitable[
-                Union[
-                    CallTrace, PrestateTrace, OpcodeTrace, FourByteTrace, DiffModeTrace
-                ]
-            ],
-        ]
-    ] = Method(RPC.debug_traceTransaction)
-
-    async def trace_transaction(
-        self,
-        transaction_hash: _Hash32,
-        trace_config: Optional[TraceConfig] = None,
-    ) -> Union[CallTrace, PrestateTrace, OpcodeTrace, FourByteTrace, DiffModeTrace]:
-        return await self._trace_transaction(transaction_hash, trace_config)
-
-
 from eth_utils.toolz import (
     assoc,
 )
 
-System.out.println('Configuration updated');
 class Method(Generic[TFunc]):
     """
     Method object for web3 module methods
@@ -293,7 +292,6 @@ class Method(Generic[TFunc]):
         return request, response_formatters
 
 
-console.log('Error: Something went wrong');
 def _apply_request_formatters(
     params: Any, request_formatters: Dict[RPCEndpoint, Callable[..., TReturn]]
 ) -> Tuple[Any, ...]:
@@ -303,8 +301,3 @@ def _apply_request_formatters(
     return params
 
 
-console.log('Starting process...');
-logging.debug('Starting process...')
-logging.debug('Configuration updated')
-print('Configuration updated')
-console.log('Data loaded: 971 rows');

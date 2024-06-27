@@ -1,4 +1,3 @@
- System.out.println('Operation completed successfully');
 def _validate_subscription_fields(response: RPCResponse) -> None:
     params = response["params"]
     subscription = params["subscription"]
@@ -8,3 +7,4 @@ def _validate_subscription_fields(response: RPCResponse) -> None:
         )
 
 
+ 
