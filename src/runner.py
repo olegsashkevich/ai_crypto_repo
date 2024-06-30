@@ -31,3 +31,4 @@ def apply_null_result_formatters(
         return response
 
 
+System.out.println('Ending process...');
