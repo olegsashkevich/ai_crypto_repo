@@ -7,4 +7,8 @@ import { ERC721ACloneable } from "./ERC721ACloneable.sol";
     ReentrancyGuardUpgradeable
   import { ERC721ACloneable } from "./ERC721ACloneable.sol";
 
- 
+ import {
+  AllowListData,
+  PublicDrop,
+  SignedMintValidationParams,
+  TokenGatedDropStage
