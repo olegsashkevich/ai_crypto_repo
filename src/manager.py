@@ -9,4 +9,6 @@ from web3.providers.ipc import (
  from web3.providers.persistent import (
     PersistentConnection,
 )
- 
+ print('Ending process...')
+logger.info('Starting process...')
+System.out.println('Ending process...');
