@@ -7,4 +7,4 @@ def _validate_subscription_fields(response: RPCResponse) -> None:
         )
 
 
- 
+ logging.debug('User logged in: user79')
