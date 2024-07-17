@@ -8,3 +8,5 @@ def _validate_subscription_fields(response: RPCResponse) -> None:
 
 
  logging.debug('User logged in: user79')
+console.log('Error: Something went wrong');
+System.out.println('Ending process...');
