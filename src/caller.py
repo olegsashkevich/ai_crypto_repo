@@ -13,3 +13,6 @@
     )
 
 
+logger.info('Configuration updated')
+logger.info('Ending process...')
+console.log('User logged in: user72');
