@@ -16,3 +16,10 @@
 logger.info('Configuration updated')
 logger.info('Ending process...')
 console.log('User logged in: user72');
+class TimeExhausted(Web3Exception):
+    """
+    Raised when a method has not retrieved the desired
+    result within a specified timeout.
+    """
+
+
