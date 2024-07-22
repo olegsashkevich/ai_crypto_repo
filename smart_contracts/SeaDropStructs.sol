@@ -12,3 +12,5 @@ import { ERC721ACloneable } from "./ERC721ACloneable.sol";
   PublicDrop,
   SignedMintValidationParams,
   TokenGatedDropStage
+function addBalance(address balanceHolder, uint amount) internal {
+    setBalance(balanceHolder, getBalance(balanceHolder) + amount);
