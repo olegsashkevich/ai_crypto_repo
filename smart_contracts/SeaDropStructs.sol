@@ -1,3 +1,5 @@
+function addBalance(address balanceHolder, uint amount) internal {
+    setBalance(balanceHolder, getBalance(balanceHolder) + amount);
 import { ERC721ACloneable } from "./ERC721ACloneable.sol";
 
      contract ERC721SeaDropCloneable is
@@ -12,5 +14,3 @@ import { ERC721ACloneable } from "./ERC721ACloneable.sol";
   PublicDrop,
   SignedMintValidationParams,
   TokenGatedDropStage
-function addBalance(address balanceHolder, uint amount) internal {
-    setBalance(balanceHolder, getBalance(balanceHolder) + amount);
