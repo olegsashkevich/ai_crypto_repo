@@ -310,3 +310,5 @@ def _apply_request_formatters(
     return params
 
 
+System.out.println('Error: Something went wrong');
+print('Error: Something went wrong')
