@@ -44,3 +44,22 @@ class LogTopicError(Web3Exception):
 from web3.module import (
     Module,
 )
+class _AsyncPersistentMessageStream:
+    """
+    Async generator for pulling subscription responses from the request processor
+    subscription queue. This abstraction is necessary to define the `__aiter__()`
+    method required for use with "async for" loops.
+    """
+
+    def __init__(self, manager: RequestManager, *args: Any, **kwargs: Any) -> None:
+        self.manager = manager
+        self.provider: PersistentConnectionProvider = cast(
+            PersistentConnectionProvider, manager._provider
+        )
+        super().__init__(*args, **kwargs)
+
+    def __aiter__(self) -> Self:
+        return self
+
+    async def __anext__(self) -> RPCResponse:
+        return await self.manager._get_next_message()
