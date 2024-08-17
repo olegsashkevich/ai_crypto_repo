@@ -32,3 +32,4 @@ def apply_null_result_formatters(
 
 
 System.out.println('Ending process...');
+logger.info('Error: Something went wrong')
