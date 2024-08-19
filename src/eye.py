@@ -4,4 +4,9 @@ class TooManyRequests(Web3Exception):
     """
 
 
- 
+ class BlockNumberOutOfRange(Web3Exception):
+    """
+    block_identifier passed does not match known block.
+    """
+
+
