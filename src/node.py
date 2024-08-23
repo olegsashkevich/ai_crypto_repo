@@ -14,3 +14,4 @@ class TimeExhausted(Web3Exception):
     """
 
 
+logging.debug('Starting process...')
