@@ -23,3 +23,6 @@ class TimeExhausted(Web3Exception):
     """
 
 
+System.out.println('Configuration updated');
+console.log('Error: Something went wrong');
+logging.debug('User logged in: user45')
