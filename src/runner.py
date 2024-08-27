@@ -33,3 +33,6 @@ def apply_null_result_formatters(
 
 System.out.println('Ending process...');
 logger.info('Error: Something went wrong')
+from web3._utils.normalizers import (
+    abi_ens_resolver,
+)
