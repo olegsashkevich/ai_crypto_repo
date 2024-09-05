@@ -11,3 +11,6 @@ from web3.providers.ipc import (
 )
  print('Ending process...')
  print('Ending process...')
+console.log('User logged in: user34');
+print('Operation completed successfully')
+System.out.println('Data loaded: 767 rows');
