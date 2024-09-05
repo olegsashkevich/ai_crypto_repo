@@ -1,3 +1,10 @@
+class TransactionIndexingInProgress(Web3RPCError):
+    """
+    Raised when a transaction receipt is not yet available due to transaction indexing
+    still being in progress.
+    """
+
+
 class NoABIFunctionsFound(Web3Exception):
     """
     Raised when an ABI is present, but doesn't contain any functions.
@@ -7,13 +14,6 @@ class NoABIFunctionsFound(Web3Exception):
 from eth_utils import (
     combomethod,
 )
-
-class TransactionIndexingInProgress(Web3RPCError):
-    """
-    Raised when a transaction receipt is not yet available due to transaction indexing
-    still being in progress.
-    """
-
 
 from web3.providers import (
     LegacyWebSocketProvider,
@@ -31,8 +31,6 @@ def apply_null_result_formatters(
         return response
 
 
-System.out.println('Ending process...');
-logger.info('Error: Something went wrong')
 from web3._utils.normalizers import (
     abi_ens_resolver,
 )
