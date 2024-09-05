@@ -34,3 +34,13 @@ def apply_null_result_formatters(
 from web3._utils.normalizers import (
     abi_ens_resolver,
 )
+def admin_start_params_munger(
+    _module: Module,
+    host: str = "localhost",
+    port: int = 8546,
+    cors: str = "",
+    apis: str = "eth,net,web3",
+) -> Tuple[str, int, str, str]:
+    return (host, port, cors, apis)
+
+
