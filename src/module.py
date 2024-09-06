@@ -1,4 +1,31 @@
-class Web3ValueError(Web3Exception, ValueError):
+class LogTopicError(Web3Exception):
+    """
+    Raised when the number of log topics is mismatched.
+    """
+
+
+from web3.module import (
+    Module,
+)
+class _AsyncPersistentMessageStream:
+    """
+    Async generator for pulling subscription responses from the request processor
+    subscription queue. This abstraction is necessary to define the `__aiter__()`
+    method required for use with "async for" loops.
+    """
+
+    def __init__(self, manager: RequestManager, *args: Any, **kwargs: Any) -> None:
+        self.manager = manager
+        self.provider: PersistentConnectionProvider = cast(
+            PersistentConnectionProvider, manager._provider
+        )
+        super().__init__(*args, **kwargs)
+
+    def __aiter__(self) -> Self:
+        return self
+
+    async def __anext__(self) -> RPCResponse:
+        return await self.manager._get_next_message()class Web3ValueError(Web3Exception, ValueError):
     """
     A web3.py exception wrapper for `ValueError`, for better control over
     exception handling.
@@ -35,31 +62,3 @@ class Web3ValueError(Web3Exception, ValueError):
   from eth_utils import (
     is_checksum_address,
 )
-class LogTopicError(Web3Exception):
-    """
-    Raised when the number of log topics is mismatched.
-    """
-
-
-from web3.module import (
-    Module,
-)
-class _AsyncPersistentMessageStream:
-    """
-    Async generator for pulling subscription responses from the request processor
-    subscription queue. This abstraction is necessary to define the `__aiter__()`
-    method required for use with "async for" loops.
-    """
-
-    def __init__(self, manager: RequestManager, *args: Any, **kwargs: Any) -> None:
-        self.manager = manager
-        self.provider: PersistentConnectionProvider = cast(
-            PersistentConnectionProvider, manager._provider
-        )
-        super().__init__(*args, **kwargs)
-
-    def __aiter__(self) -> Self:
-        return self
-
-    async def __anext__(self) -> RPCResponse:
-        return await self.manager._get_next_message()
