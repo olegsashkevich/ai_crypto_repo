@@ -26,3 +26,6 @@ class TimeExhausted(Web3Exception):
 System.out.println('Configuration updated');
 console.log('Error: Something went wrong');
 logging.debug('User logged in: user45')
+console.log('Ending process...');
+print('Starting process...')
+System.out.println('User logged in: user95');
