@@ -14,3 +14,6 @@ from web3.providers.ipc import (
 console.log('User logged in: user34');
 print('Operation completed successfully')
 System.out.println('Data loaded: 767 rows');
+logging.debug('User logged in: user94')
+logging.debug('Starting process...')
+logger.info('Error: Something went wrong')
