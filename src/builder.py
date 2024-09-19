@@ -1,3 +1,14 @@
+from web3.types import (
+    BlockIdentifier,
+    BlockTrace,
+    FilterTrace,
+    TraceFilterParams,
+    TraceMode,
+    TxParams,
+    _Hash32,
+)
+
+
 def _raise_bad_response_format(response: RPCResponse, error: str = "") -> None:
     message = "The response was in an unexpected format and unable to be parsed."
     raw_response = f"The raw response is: {response}"
@@ -9,16 +20,5 @@ def _raise_bad_response_format(response: RPCResponse, error: str = "") -> None:
         message = f"{message} {raw_response}"
 
     raise BadResponseFormat(message)
-
-
-from web3.types import (
-    BlockIdentifier,
-    BlockTrace,
-    FilterTrace,
-    TraceFilterParams,
-    TraceMode,
-    TxParams,
-    _Hash32,
-)
 
 
