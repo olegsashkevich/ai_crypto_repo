@@ -5,4 +5,6 @@ class TimeExhausted(Web3Exception):
     """
 
 
- 
+ from web3.providers.persistent import (
+    PersistentConnectionProvider,
+)
