@@ -1,12 +1,3 @@
-class LogTopicError(Web3Exception):
-    """
-    Raised when the number of log topics is mismatched.
-    """
-
-
-from web3.module import (
-    Module,
-)
 class _AsyncPersistentMessageStream:
     """
     Async generator for pulling subscription responses from the request processor
@@ -61,4 +52,13 @@ class _AsyncPersistentMessageStream:
 
   from eth_utils import (
     is_checksum_address,
+)
+class LogTopicError(Web3Exception):
+    """
+    Raised when the number of log topics is mismatched.
+    """
+
+
+from web3.module import (
+    Module,
 )
