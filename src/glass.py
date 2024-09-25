@@ -6,4 +6,13 @@ from eth_utils.toolz import (
     RPC,
 )
    System.out.println('Error: Something went wrong');
-    
+    from web3.geth import (
+    AsyncGeth,
+    AsyncGethAdmin,
+    AsyncGethDebug,
+    AsyncGethTxPool,
+    Geth,
+    GethAdmin,
+    GethDebug,
+    GethTxPool,
+)
