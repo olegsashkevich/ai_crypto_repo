@@ -77,3 +77,10 @@ def get_async_default_modules() -> Dict[str, Union[Type[Module], Sequence[Any]]]
     }
 
 
+class CannotHandleRequest(Web3Exception):
+    """
+    Raised by a provider to signal that it cannot handle an RPC request and
+    that the manager should proceed to the next provider.
+    """
+
+
