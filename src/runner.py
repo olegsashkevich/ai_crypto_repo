@@ -15,10 +15,6 @@ from eth_utils import (
     combomethod,
 )
 
-from web3.providers import (
-    LegacyWebSocketProvider,
-    WebSocketProvider,
-)
 def apply_null_result_formatters(
     null_result_formatters: Callable[..., Any],
     response: RPCResponse,
@@ -31,6 +27,10 @@ def apply_null_result_formatters(
         return response
 
 
+from web3.providers import (
+    LegacyWebSocketProvider,
+    WebSocketProvider,
+)
 from web3._utils.normalizers import (
     abi_ens_resolver,
 )
