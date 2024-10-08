@@ -62,3 +62,18 @@ class LogTopicError(Web3Exception):
 from web3.module import (
     Module,
 )
+def get_async_default_modules() -> Dict[str, Union[Type[Module], Sequence[Any]]]:
+    return {
+        "eth": AsyncEth,
+        "net": AsyncNet,
+        "geth": (
+            AsyncGeth,
+            {
+                "admin": AsyncGethAdmin,
+                "txpool": AsyncGethTxPool,
+                "debug": AsyncGethDebug,
+            },
+        ),
+    }
+
+
