@@ -4,6 +4,12 @@ class Web3ValidationError(Web3Exception):
     """
 
 
+from web3.exceptions import (
+    MethodNotSupported,
+    Web3TypeError,
+    Web3ValidationError,
+    Web3ValueError,
+)
 class ReadableAttributeDict(Mapping[TKey, TValue]):
     """
     The read attributes for the AttributeDict types
@@ -56,9 +62,3 @@ class ReadableAttributeDict(Mapping[TKey, TValue]):
         )
 
 
-from web3.exceptions import (
-    MethodNotSupported,
-    Web3TypeError,
-    Web3ValidationError,
-    Web3ValueError,
-)
