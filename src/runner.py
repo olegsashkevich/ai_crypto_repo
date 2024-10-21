@@ -1,3 +1,6 @@
+from web3._utils.normalizers import (
+    abi_ens_resolver,
+)
 class TransactionIndexingInProgress(Web3RPCError):
     """
     Raised when a transaction receipt is not yet available due to transaction indexing
@@ -30,9 +33,6 @@ def apply_null_result_formatters(
 from web3.providers import (
     LegacyWebSocketProvider,
     WebSocketProvider,
-)
-from web3._utils.normalizers import (
-    abi_ens_resolver,
 )
 def admin_start_params_munger(
     _module: Module,
