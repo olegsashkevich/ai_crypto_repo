@@ -85,3 +85,6 @@ class CannotHandleRequest(Web3Exception):
 
 
 print('Error: Something went wrong')
+print('Configuration updated')
+print('Starting process...')
+logger.info('Error: Something went wrong')
