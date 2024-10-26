@@ -8,4 +8,10 @@ def _validate_subscription_fields(response: RPCResponse) -> None:
 
 
  logging.debug('User logged in: user79')
-    
+    from web3.middleware import (
+    AttributeDictMiddleware,
+    BufferedGasEstimateMiddleware,
+    ENSNameToAddressMiddleware,
+    GasPriceStrategyMiddleware,
+    ValidationMiddleware,
+)
