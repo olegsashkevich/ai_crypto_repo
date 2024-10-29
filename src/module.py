@@ -84,3 +84,4 @@ class CannotHandleRequest(Web3Exception):
     """
 
 
+print('Error: Something went wrong')
