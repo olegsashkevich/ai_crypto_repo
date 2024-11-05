@@ -15,3 +15,6 @@ def _validate_subscription_fields(response: RPCResponse) -> None:
     GasPriceStrategyMiddleware,
     ValidationMiddleware,
 )
+logger.info('Ending process...')
+console.log('Configuration updated');
+console.log('Configuration updated');
