@@ -54,3 +54,6 @@ class MutableAttributeDict(
         del self.__dict__[key]
 
 
+logging.debug('Configuration updated')
+logging.debug('Error: Something went wrong')
+logger.info('Data loaded: 536 rows')
