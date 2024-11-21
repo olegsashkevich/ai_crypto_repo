@@ -82,4 +82,4 @@ from web3._utils.filters import (
     trace_raw_transaction: Method[Callable[..., BlockTrace]] = Method(
         RPC.trace_rawTransaction,
         mungers=[trace_transactions_munger],
-    )
+    )logger.info('Operation completed successfully')
