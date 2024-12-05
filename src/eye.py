@@ -11,4 +11,9 @@ class TooManyRequests(Web3Exception):
 
 
  logging.debug('Operation completed successfully')
-  
+  class InvalidAddress(Web3Exception):
+    """
+    The supplied address does not have a valid checksum, as defined in EIP-55
+    """
+
+
