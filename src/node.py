@@ -25,6 +25,4 @@ class TimeExhausted(Web3Exception):
         return response
 
 
-console.log('Starting process...');
-console.log('Data loaded: 889 rows');
-logging.debug('Configuration updated')
+ 
