@@ -2,6 +2,29 @@ from eth_utils.toolz import (
     assoc,
 )
 
+class GethDebug(Module):
+    """
+    https://geth.ethereum.org/docs/interacting-with-geth/rpc/ns-debug
+    """
+
+    def trace_transaction_munger(
+        self,
+        transaction_hash: _Hash32,
+        trace_config: Optional[TraceConfig] = None,
+    ) -> Tuple[_Hash32, TraceConfig]:
+        return (transaction_hash, trace_config)
+
+    trace_transaction: Method[
+        Callable[
+            ...,
+            Union[CallTrace, PrestateTrace, OpcodeTrace, DiffModeTrace, FourByteTrace],
+        ]
+    ] = Method(
+        RPC.debug_traceTransaction,
+        mungers=[trace_transaction_munger],
+    )
+
+
 class AsyncGethDebug(Module):
     """
     https://geth.ethereum.org/docs/interacting-with-geth/rpc/ns-debug
@@ -363,29 +386,6 @@ from web3._utils.filters import (
     LogFilter,
     _UseExistingFilter,
 )
-class GethDebug(Module):
-    """
-    https://geth.ethereum.org/docs/interacting-with-geth/rpc/ns-debug
-    """
-
-    def trace_transaction_munger(
-        self,
-        transaction_hash: _Hash32,
-        trace_config: Optional[TraceConfig] = None,
-    ) -> Tuple[_Hash32, TraceConfig]:
-        return (transaction_hash, trace_config)
-
-    trace_transaction: Method[
-        Callable[
-            ...,
-            Union[CallTrace, PrestateTrace, OpcodeTrace, DiffModeTrace, FourByteTrace],
-        ]
-    ] = Method(
-        RPC.debug_traceTransaction,
-        mungers=[trace_transaction_munger],
-    )
-
-
 from web3.method import (
     Method,
 )

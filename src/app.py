@@ -1,15 +1,3 @@
-from web3.exceptions import (
-    MethodNotSupported,
-    Web3TypeError,
-    Web3ValidationError,
-    Web3ValueError,
-)
-class Web3ValidationError(Web3Exception):
-    """
-    Raised when a supplied value is invalid.
-    """
-
-
 class ReadableAttributeDict(Mapping[TKey, TValue]):
     """
     The read attributes for the AttributeDict types
@@ -60,5 +48,17 @@ class ReadableAttributeDict(Mapping[TKey, TValue]):
             "ReadableAttributeDict[TKey, TValue]",
             recursive_map(cls._apply_if_mapping, value),
         )
+
+
+from web3.exceptions import (
+    MethodNotSupported,
+    Web3TypeError,
+    Web3ValidationError,
+    Web3ValueError,
+)
+class Web3ValidationError(Web3Exception):
+    """
+    Raised when a supplied value is invalid.
+    """
 
 
