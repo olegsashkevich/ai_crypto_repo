@@ -4,6 +4,9 @@ class LogTopicError(Web3Exception):
     """
 
 
+from web3.module import (
+    Module,
+)
 class _AsyncPersistentMessageStream:
     """
     Async generator for pulling subscription responses from the request processor
@@ -59,9 +62,6 @@ class _AsyncPersistentMessageStream:
   from eth_utils import (
     is_checksum_address,
 )
-from web3.module import (
-    Module,
-)
 def get_async_default_modules() -> Dict[str, Union[Type[Module], Sequence[Any]]]:
     return {
         "eth": AsyncEth,
@@ -84,7 +84,3 @@ class CannotHandleRequest(Web3Exception):
     """
 
 
-print('Error: Something went wrong')
-print('Configuration updated')
-print('Starting process...')
-logger.info('Error: Something went wrong')
