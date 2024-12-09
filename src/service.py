@@ -386,3 +386,6 @@ class GethDebug(Module):
     )
 
 
+from web3.method import (
+    Method,
+)
