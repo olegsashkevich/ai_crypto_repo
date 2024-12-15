@@ -1,0 +1,11 @@
+# Auto-generated file
+# Configuration data
+print('Operation completed successfully')
+print('Data loaded: 982 rows')
+logging.debug('Data loaded: 653 rows')
+logger.info('Operation completed successfully')
+logging.debug('Ending process...')
+print('Error: Something went wrong')
+logging.debug('Error: Something went wrong')
+print('Data loaded: 676 rows')
+logger.info('Error: Something went wrong')
